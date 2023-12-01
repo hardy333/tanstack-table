@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #88878b;
+  font-family: sans-serif;
+  padding: 20px
+}
+
+.table-wrapper {
+  width: 1200px;
+  max-width: 100%;
+  margin-left: auto;
+  background-color: #fff;
+  border-radius: 15px;
+  /* border:1px solid black; */
+  padding: 20px;
+  overflow: auto;
+  position: relative;
+  padding-top: 50px;
+
+  height: 600px !important;
+
+
+  
+}
+
+table {
+  /* width: 100%; */
+  padding: 20px;
+  border-radius: inherit;
+
+  /* border: 1px solid red; */
+  font-size: 14px;
+  border-collapse:collapse;
+  width: fit-content;
+
+
+
+
+  
+}
+
+
+thead{
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 100px;
+  
+}
+
+tbody{
+}
+
+th,
+td {
+  padding: 10px 16px;
+}
+
+
+th{
+  font-size: 16px;
+  text-align: left;
+  text-align: start;
+  position: relative;
+
+}
+
+tr{
+  border-bottom: 1px solid #dde2eb;
+  width: fit-content;
+
+
+
+}
+
+tbody tr{
+  height: 50px;
+}
+
+
+/* Resizer */
+/* Resizer */
+/* Resizer */
+
+ 
+.resizer {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  height: 100%;
+  width: 20px;
+  background: rgba(151, 19, 19, 0);
+  cursor: col-resize;
+  user-select: none;
+  touch-action: none;
+  border-radius: 20px;
+
+}
+
+.resizer::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 30px;
+  width: 4px;
+  transform: translate(-50%, -50%);
+  z-index: 22;
+  background: rgba(132, 129, 129, 0.959);
+  border-radius: 20px;
+
+}
+
+.resizer.isResizing::before {
+
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  .resizer::before {
+    opacity: 0;
+  }
+
+  *:hover > .resizer::before {
+    opacity: 1;
+  }
+}
