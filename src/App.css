@@ -60,7 +60,7 @@ tbody{
 
 th,
 td {
-  padding: 10px 16px;
+  padding: 0px 16px;
 }
 
 
@@ -81,7 +81,7 @@ tr{
 }
 
 tbody tr{
-  height: 50px;
+  height: 30px;
 }
 
 
@@ -121,6 +121,95 @@ tbody tr{
 .resizer.isResizing::before {
 
   opacity: 1;
+}
+
+
+th{
+  padding-bottom: 20px;
+}
+th input{
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 100px;
+  /* display: none; */
+  
+}
+
+.checkbox-container{
+  display: flex;
+  padding: 20px 0;
+}
+
+.table-pagination{
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 100px;
+  width: 300px;
+  border: 1px solid yellow;
+
+  display: flex;
+  justify-content: space-between;
+
+}
+
+/* Resize */
+.resize-container{
+  border: 1px solid red;
+  margin-left: 200px;
+  width: 300px;
+
+}
+
+.resize-fixed-width-container{
+  background-color: yellow;
+  /* width: 150px; */
+  width: 60%;
+
+
+}
+
+.resize-text{
+  overflow:hidden; 
+  white-space:nowrap; 
+  text-overflow: ellipsis;
+}
+
+
+.resize-column-box{
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: red;
+  margin-left: 200px;
+}
+
+/* Table head td resize */
+/* Table head td resize */
+/* Table head td resize */
+.th-text-container{
+  border: 1px solid red;
+  width: 60%;
+  position: relative;
+
+}
+
+.th-text{
+
+}
+
+.th-sort-icon{
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: -20px;
+  transform: translate(0, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (hover: hover) {
